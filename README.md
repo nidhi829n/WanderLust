@@ -54,60 +54,64 @@
 
 ---
 
-## ⚙️ Getting Started & Installation
+## 🚀 Getting Started
 
-Follow these steps to set up and run the project locally on your machine.
+Follow these steps to run the project locally.
 
-### Prerequisites
-* [Node.js](https://nodejs.org/) installed on your computer
-* [MongoDB](https://www.mongodb.com/) (Local instance or Atlas Cluster URI)
+### 1️⃣ Clone the Repository
 
 ```bash
-### Step 1: Clone the Repository
-
-git clone [https://github.com/nidhi829n/WanderLust.git](https://github.com/nidhi829n/WanderLust.git)
+git clone https://github.com/nidhi829n/WanderLust.git
 cd WanderLust
+```
 
-Step 2: Install Dependencies
-Bash
+### 2️⃣ Install Dependencies
+
+```bash
 npm install
-Step 3: Configure Environment Variables
-Create a .env file in the root directory of your project and configure the following keys:
+```
 
-Code snippet
+### 3️⃣ Configure Environment Variables
+
+Create a `.env` file in the project root and add the following environment variables:
+
+```env
 PORT=8080
 ATLASDB_URL=your_mongodb_connection_string
-SECRET=yoursessionsecret
+SECRET=your_session_secret
 CLOUD_NAME=your_cloudinary_cloud_name
 CLOUD_API_KEY=your_cloudinary_api_key
 CLOUD_API_SECRET=your_cloudinary_api_secret
 MAPBOX_TOKEN=your_mapbox_access_token
-Step 4: Run the Application
-Bash
+```
+
+### 4️⃣ Run the Application
+
+```bash
 node app.js
-Open your browser and navigate to: http://localhost:8080/listings
+```
 
+The application will be available at:
 
-### Part 2: API Endpoints Overview
+```text
+http://localhost:8080/listings
+```
 
-```markdown
+---
 
-
-## 📡 API Endpoints Overview
+# 📡 API Endpoints Overview
 
 | Method | Endpoint | Description | Access Control |
-| :--- | :--- | :--- | :--- |
+| :------ | :-------- | :---------- | :------------- |
 | `GET` | `/listings` | View all vacation stays | Public |
-| `GET` | `/listings/new` | Form to create a new listing | Authenticated Users |
-| `POST` | `/listings` | Add new listing to database | Authenticated Users |
-| `GET` | `/listings/:id` | View specific listing details & maps | Public |
-| `GET` | `/listings/:id/edit` | Form to edit existing listing | Listing Owner |
-| `PUT` | `/listings/:id` | Update listing data | Listing Owner |
-| `DELETE` | `/listings/:id` | Remove a listing | Listing Owner |
-| `POST` | `/listings/:id/reviews` | Post a review on a stay | Authenticated Users |
-| `DELETE` | `/listings/:id/reviews/:reviewId`| Delete a specific review | Review Author |
-
-```
+| `GET` | `/listings/new` | Display form to create a new listing | Authenticated Users |
+| `POST` | `/listings` | Create a new listing | Authenticated Users |
+| `GET` | `/listings/:id` | View detailed information about a listing | Public |
+| `GET` | `/listings/:id/edit` | Display form to edit a listing | Listing Owner |
+| `PUT` | `/listings/:id` | Update an existing listing | Listing Owner |
+| `DELETE` | `/listings/:id` | Delete a listing | Listing Owner |
+| `POST` | `/listings/:id/reviews` | Add a review to a listing | Authenticated Users |
+| `DELETE` | `/listings/:id/reviews/:reviewId` | Delete a review | Review Author |
 ---
 
 ## 🤝 Contributing
