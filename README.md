@@ -11,8 +11,6 @@
 
 *A modern, full-stack vacation rental marketplace web application designed for seamless property listing, interactive exploration, and trusted peer reviews.*
 
-[Explore Features](#-key-features) • [Tech Stack](#-tech-stack) • [Getting Started](#-getting-started) • [API Documentation](#-api-endpoints)
-
 </div>
 
 ---
